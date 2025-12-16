@@ -4,25 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vortex</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+  <script>
+    const targetUrl = "https://vortexscripts.created.app" + 
+                      window.location.pathname + 
+                      window.location.search + 
+                      window.location.hash;
+    window.location.href = targetUrl;
+  </script>
 </head>
 <body>
-  <iframe id="vortexFrame"></iframe>
   <script>
-    const iframe = document.getElementById('vortexFrame');
-    iframe.src = "https://vortexscripts.created.app" + window.location.pathname + window.location.search + window.location.hash;
+    const link = document.getElementById("link");
+    link.href = targetUrl;
+    link.textContent = targetUrl;
   </script>
 </body>
 </html>
